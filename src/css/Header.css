@@ -1,0 +1,14 @@
+.container-header {
+    background-color: #FFC700;
+    /* height: 500px; */
+}
+
+.content-header img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-left img {
+
+}

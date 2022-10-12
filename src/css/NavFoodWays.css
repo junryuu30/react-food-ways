@@ -1,0 +1,16 @@
+.button {
+    background-color: #433434 !important;
+}
+
+.form-login {
+    width: 350px;
+    height: 450px;
+    padding: 100px;
+}
+
+.form-auth h3{
+    margin-top: 30px;
+}
+
+.form-login input {
+}

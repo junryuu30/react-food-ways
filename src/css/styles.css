@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;700&display=swap');
+
+*{
+    font-family: 'Abhaya Libre', serif;
+}
+
+.navbar-fw {
+    background-color: #FFC700;
+
+}
+
+.btn-nav {
+    background-color: #433434 !important;
+
+}
+
+/* PopularRestaurant */
+.container-resto {
+   background-color:  #E5E5E5;
+}
+
+
+
+/* Nav Patners */
+.dropdown-patner {
+    width: 10px;
+}
+
+.drop-patner-icon {
+    width: 15px;
+    margin-right: 5px;
+}
+
+/* Menu Card */
+.card-text-menu-card {
+    color: red;
+}
+
+/* Menu Detail */
+.container-menu-detail{
+    background-color: #EFEFEF;
+}
+
+
+/* Profile user */
+.container-profile-user{
+    background-color: #E5E5E5;
+    height: 87vh;
+}
+
+.profile-tag p{
+    font-size: medium;
+}
+
+.btn-profile-user{
+    background-color: #befada !important;
+    color: #00FF75 !important;
+    border: none;
+}
+
+
+/* edit-profile */
+.btn-edit-profile {
+    margin-top: 30px;
+    background-color: #433434 !important;
+    padding: 8px 100px;
+    border: none;
+}
+
+.form-edit-profile input{
+    border: 1px solid;
+    background-color: #766C6C;
+}
+
+/* Income Transaction */
+.container-income-transaction{
+    background-color: #E5E5E5;
+    height: 80vh;
+}
+
+.row-1-5{
+    color: #FF9900;
+
+}
+
+.btn-table1{
+    background-color: #FF0742 !important;
+    color: white;
+    border: none;
+}
+
+.btn-table2{
+    background-color: #0ACF83 !important;
+    color: white;
+    border: none;
+}
