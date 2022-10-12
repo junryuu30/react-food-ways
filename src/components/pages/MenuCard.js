@@ -2,7 +2,7 @@ import {Card, Button} from 'react-bootstrap';
 
 const MenuCard = (props) => {
     return (
-        <Card style={{ width: '15rem' }} className='m-3'>
+        <Card style={{ width: '100%' }} className=''>
             <Card.Text className="">
                 <Card.Img src={props.image} style={{ width: '100%' }} className="p-2"/>
                 <div className='px-2' >

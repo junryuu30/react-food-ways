@@ -2,7 +2,7 @@ import {Card} from 'react-bootstrap';
 
 const CardRestoNear = (props) => {
     return (
-        <Card style={{ width: '15rem' }}>
+        <Card style={{ width: '100%' }}>
             <Card.Text >
             <div>
                 <img 

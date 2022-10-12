@@ -13,11 +13,11 @@ const Header = ()=>{
                     <Col>
                         <h1>Are You Hungry ? <br/> Express Home Delivery</h1>
                         <Row>
-                            <Col className='col-lg-4 col-md-12 col-sm-12'>
-                                <img src={garis} />
+                            <Col className='col-lg-4 col-12 me-lg-3 mb-3'>
+                                <img src={garis} style={{width:"100%"}}/>
                             </Col>
-                            <Col className='col-lg-4 col-md-12 col-sm-12'>
-                                <p className="ms-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                            <Col className=''>
+                                <p className="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                             </Col>
                         </Row>
                     </Col>

@@ -11,9 +11,9 @@ const MenuDetail = () => {
             <Container fluid className='container-menu-detail'>
                 <Container className='container-menu-detail'>
                     <h2 className='p-4'>Geprek Bensu, Menus</h2>
-                    <Row>
+                    <Row className='d-flex'>
                         {DataMenu.map((item, index)=>(
-                            <Col key={index} className='m-2' >
+                            <Col key={index} className='col-lg-3 col-md-6 col-sm-12 mb-3'>
                                 <MenuCard name={item.name} price={item.price} image={item.image}/>
                             </Col>
                         ))} 

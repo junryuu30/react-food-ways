@@ -10,7 +10,7 @@ import logout from '../assets/logout.png'
 function NavUser() {
   return (
     <>
-      <Navbar expand="lg" className='navbar-fw'>
+      <Navbar expand="lg" className='navbar-fw' style={{height:'10vh'}}>
         <Container>
           <Navbar.Brand href="/">
             WaysFood 
