@@ -5,12 +5,11 @@ import coret from '../../assets/x.png'
 
 const IncomeTransaction = () => {
     return (
-        <>
+        <div>
             <NavPatner/>
-            <Container fluid className='container-income-transaction'>
+                <Container className='container-income-transaction'>
                 <h2 className='p-4'>Income Transaction</h2>
-                <Container className='container-income-transaction p-4'>
-                    <table class="table table-bordered">
+                    <table class="table table-bordered p-4">
                         <thead>
                             <tr style={{backgroundColor:'#828282'}}>
                             <th scope="col">No.</th>
@@ -44,7 +43,7 @@ const IncomeTransaction = () => {
                             <td style={{color:'#78A85A'}}>Success</td>
                             <td>
                                 <div className='d-flex justify-content-center'>
-                                    <img src={ceklis}/>
+                                    <img src={ceklis} alt=''/>
                                 </div>
                             </td>
                             </tr>
@@ -57,7 +56,7 @@ const IncomeTransaction = () => {
                             <td style={{color:'red'}}>Cancel</td>
                             <td>
                                 <div className='d-flex justify-content-center'>
-                                    <img src={coret}/>
+                                    <img src={coret} alt=''/>
                                 </div>
                             </td>
                             </tr>
@@ -70,7 +69,7 @@ const IncomeTransaction = () => {
                             <td style={{color:'#00D1FF'}}>On The Way</td>
                             <td>
                                 <div className='d-flex justify-content-center'>
-                                    <img src={ceklis}/>
+                                    <img src={ceklis} alt=''/>
                                 </div>
                             </td>
                             </tr>
@@ -79,8 +78,7 @@ const IncomeTransaction = () => {
 
 
                 </Container>
-            </Container>
-        </>
+        </div>
        
         
     )

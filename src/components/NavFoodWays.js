@@ -21,11 +21,11 @@ function NavFoodWays() {
 
   return (
     <>
-      <Navbar expand="lg" className='navbar-fw' style={{height:'10vh'}}>
+      <Navbar expand="lg" className='navbar-fw' style={{}}>
         <Container>
           <Navbar.Brand href="#home">
             WaysFood 
-            <img src={logoWaysFood}/>
+            <img src={logoWaysFood} alt=''/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="navbar-scroll" className='justify-content-end'>

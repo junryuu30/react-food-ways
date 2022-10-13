@@ -1,9 +1,8 @@
-import {Container, Row, Col, Button, Card} from 'react-bootstrap'
+import {Container, Row, Col, Button, Form} from 'react-bootstrap'
 import NavFoodWays from "../NavFoodWays"
 import map from '../../assets/map.png'
-import geprekOri from '../../assets/geprekori1.svg'
 import trash from '../../assets/trash.png'
-import geprekKeju2 from '../../assets/geprekkeju2.svg'
+import { DataCart } from '../dataDummy/DataCart'
 
 const CartOrder = () => {
     return (
@@ -14,101 +13,99 @@ const CartOrder = () => {
                     <h2 className='pt-4'>
                         Geprek Bensu
                     </h2>
-                    <p>Delivery Location</p>
-                    <Row>
+                    <h className='my-4'>Delivery Location</h>
+                        <Row>
                             <Col className="col-12 col-md-9 mb-3">
                                 <input type="text" className="form-control" id="exampleInputEmail1" placeholder='Harbour Building'/>
                             </Col>
                             <Col className="col-12 col-md-3 mb-3">
                                 <Button variant="secondary" className="btn-nav" style={{width:'100%'}}>Select On Map</Button>
-                                <img src={map} style={{
+                                <img src={map} alt='' style={{
                                         marginLeft: '-80px',
                                         padding: '5px'}}/>
 
                             </Col>
                         </Row>
 
+                        <h5>Review Your Order</h5>
                         <Row>
-                            <p>Review Your Order</p>
-                            <Col className='col-12 col-md-8'>
-                                <Card className='border-start-0 border-end-0 rounded-0'>
-                                    <Card.Body className='d-flex'>
-                                        <Row>
-                                            <Col>
-                                                <img src={geprekOri}/>
+                            <Col className='col-lg-8'><hr/></Col>
+                            <Col className='d-none d-lg-block'><hr/></Col>
+                        </Row>
+
+                                    
+                        <Row>
+                            <Col className='col-lg-8' >
+                        {DataCart.map((item, index)=>(
+                            <Col key={index}>
+                                <Row className='d-flex align-items-center'>
+                                    <Col>
+                                        <Row className='d-flex align-items-center text-start'>
+                                            <Col className='col-3'>
+                                                <img src={item.image} alt="" style={{ width: '80px', height: '80px', objectFit: 'cover' }} />
                                             </Col>
-                                            <Col>
-                                                <h5>Paket Geprek</h5>
-                                                <Col className='d-flex justify-content-center'>
-                                                    <div className='me-3'><h4>-</h4></div>
-                                                    <div className='me-3'><h4>1</h4></div>
-                                                    <div className='me-3'><h4>+</h4></div>
-                                                </Col>
-                                            </Col>
-                                            <Col style={{textAlign:'end'}}>
-                                                <p>Rp 15.000</p>
-                                                <img src={trash}/>
+                                            <Col className=' col-9 ps-5 ps-lg-0'>
+                                                <h6 className='my-3 ff-abhaya fw-extra-bold'> {item.name} </h6>
+                                                <h6 className='my-3 ff-avenir'>
+                                                    <span className='m-2'> - </span>
+                                                    <button className='border-0 rounded'> 2 </button>
+                                                    <span className='m-2'> + </span>
+                                                </h6>
+
                                             </Col>
                                         </Row>
-                                        
-                                    </Card.Body>
-                                </Card>
+                                    </Col>
+                                    <Col className='col-4 text-end'>
+                                        <h6 className='text-danger my-3'> {item.price} </h6>
+                                        <h6 className='text-danger my-3'><img src={trash} alt="" /></h6>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        ))}
                             </Col>
 
-                            <Col className='col-12 col-md-4'>
-                                <Card className='border-start-0 border-end-0 rounded-0'>
-                                    <Card.Body>
-                                        <Row>
-                                            <Col>
-                                                <p>Subtotal</p>
-                                                <p>Qty</p>
-                                                <p>Ongkir</p>
-                                            </Col>
-                                            <Col style={{textAlign:'end'}}>
-                                                <p>Rp 35.000</p>
-                                                <p>2</p>
-                                                <p>10.0000</p>
-                                            </Col>
-                                        </Row>
-                                    </Card.Body>
-                                </Card>
+
+
+
+                            <Col className='col-lg-4 col-md-12 col-sm-12'>
                                 <Row>
-                                    <Col>
-                                        <p>Total</p>
+                                    <Col className='col-7'>
+                                        <h6>Sub Total</h6>
+                                        <h6>Qty</h6>
+                                        <h6>Ongkir</h6>
                                     </Col>
-                                    <Col style={{textAlign:'end'}}>
-                                        <p>Rp 45.000</p>
+                                    <Col className='col-5 text-end'>
+                                        <h6>Rp 35.000</h6>
+                                        <h6>2</h6>
+                                        <h6>10.000</h6>
                                     </Col>
                                 </Row>
                             </Col>
                         </Row>
 
                         <Row>
-                        <Col className='col-12 col-md-8'>
-                                <Card className='border-start-0 border-end-0 rounded-0'>
-                                    <Card.Body className='d-flex'>
-                                        <Row>
-                                            <Col>
-                                                <img src={geprekKeju2}/>
-                                            </Col>
-                                            <Col>
-                                                <h5>Paket Geprek</h5>
-                                                <Col className='d-flex justify-content-center'>
-                                                    <div className='me-3'><h4>-</h4></div>
-                                                    <div className='me-3'><h4>1</h4></div>
-                                                    <div className='me-3'><h4>+</h4></div>
-                                                </Col>
-                                            </Col>
-                                            <Col style={{textAlign:'end'}}>
-                                                <p>Rp 15.000</p>
-                                                <img src={trash}/>
-                                            </Col>
-                                        </Row>
-                                        
-                                    </Card.Body>
-                                </Card>
+                            <Col className='col-lg-8'><hr/></Col>
+                            <Col className='d-none d-lg-block'><hr/></Col>
+                        </Row>
+
+                        <Row className='d-flex justify-content-end align-items-end'>
+                            <Col className='col-lg-4'>
+                                <Row>
+                                    <Col className='col-7'>
+                                        <h6>Sub Total</h6>
+                                    </Col>
+                                    <Col className='col-5 text-end'>
+                                        <h6>Rp 35.000</h6>
+                                    </Col>
+                                </Row>
                             </Col>
                         </Row>
+                    
+                    <Form.Group className="">
+                        <Button type="button" className='btn-nav float-end my-3 lg-px-4' style={{padding:'0 60px'}}>
+                            Order
+                        </Button>
+                    </Form.Group>
 
                 </Container>
             </Container>

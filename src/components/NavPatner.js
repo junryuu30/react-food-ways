@@ -11,35 +11,35 @@ import foodicon from '../assets/foodicon.png'
 function NavPatner() {
   return (
     <>
-      <Navbar expand="lg" className='navbar-fw' style={{height:'10vh'}}>
+      <Navbar expand="lg" className='navbar-fw' style={{}}>
         <Container>
           <Navbar.Brand href="/">
             WaysFood 
-            <img src={logoWaysFood}/>
+            <img src={logoWaysFood} alt=''/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="navbar-scroll" className='justify-content-end'>
-            <img src={basket} className='me-2'/>
+            <img src={basket} className='me-2' alt=''/>
             
             <Dropdown>
               <Dropdown.Toggle variant="warning" id="dropdown-basic" className='dropdown-patner'>
-                <img src={profilePatner}/>
+                <img src={profilePatner} alt=''/>
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">
-                  <img src={userimg} className='drop-patner-icon'/>
+                  <img src={userimg} className='drop-patner-icon' alt=''/>
                   Profile Partner
                 </Dropdown.Item>
 
                 <Dropdown.Item href="#/action-2">
-                <img src={foodicon} className='drop-patner-icon'/>
+                <img src={foodicon} className='drop-patner-icon' alt=''/>
                   Another action
                 </Dropdown.Item>
 
                 <hr/>
                 <Dropdown.Item href="#/action-3">
-                  <img src={logout} className='drop-patner-icon'/>
+                  <img src={logout} className='drop-patner-icon' alt=''/>
                   Logout
                 </Dropdown.Item>
               </Dropdown.Menu>

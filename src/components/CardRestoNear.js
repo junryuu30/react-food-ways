@@ -6,7 +6,7 @@ const CardRestoNear = (props) => {
             <Card.Text >
             <div>
                 <img 
-                    src={props.image} 
+                    src={props.image} alt=''
                     style={{ width: '100%' }}
                     className='p-2'/>
             </div>

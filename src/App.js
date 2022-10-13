@@ -8,6 +8,8 @@ import ProfileUser from "./components/pages/ProfileUser";
 import EditProfile from "./components/pages/EditProfile";
 import IncomeTransaction from "./components/pages/IncomeTransaction";
 import CartOrder from "./components/pages/CartOrder";
+import EditTwo from "./components/pages/EditTwo";
+import EditGH from "./components/pages/EditGH"
 
 
 
@@ -22,6 +24,10 @@ function App() {
         <Route exact path="/edit-profile" element={<EditProfile />} />
         <Route exact path="/income-transaction" element={<IncomeTransaction />} />
         <Route exact path="/cart-order" element={<CartOrder/>}/>
+
+        <Route exact path="/edit-two" element={<EditTwo />} />
+        <Route exact path="/edit-gh" element={<EditGH />} />
+
       </Routes>
     </Router>
   );

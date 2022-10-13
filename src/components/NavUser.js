@@ -10,29 +10,29 @@ import logout from '../assets/logout.png'
 function NavUser() {
   return (
     <>
-      <Navbar expand="lg" className='navbar-fw' style={{height:'10vh'}}>
+      <Navbar expand="lg" className='navbar-fw' style={{}}>
         <Container>
           <Navbar.Brand href="/">
             WaysFood 
-            <img src={logoWaysFood}/>
+            <img src={logoWaysFood} alt=''/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="navbar-scroll" className='justify-content-end'>
-            <img src={basket} className='me-2'/>
+            <img src={basket} alt='' className='me-2'/>
 
             <Dropdown>
               <Dropdown.Toggle variant="warning" id="dropdown-basic" className='dropdown-patner'>
-                <img src={userProfile}/>
+                <img src={userProfile} alt=''/>
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">
-                  <img src={userimg} className='drop-patner-icon'/>
+                  <img src={userimg} alt='' className='drop-patner-icon'/>
                   Profile Partner
                 </Dropdown.Item>
                 <hr/>
                 <Dropdown.Item href="#/action-3">
-                  <img src={logout} className='drop-patner-icon'/>
+                  <img src={logout}  alt='' className='drop-patner-icon'/>
                   Logout
                 </Dropdown.Item>
               </Dropdown.Menu>

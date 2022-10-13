@@ -15,7 +15,7 @@ const ProfileUser = () => {
                             <Row>
                                 <Col>
                                     <div style={{width:'180px'}} className=''>
-                                        <img src={zaynMalik} className='mb-3'/>
+                                        <img src={zaynMalik} alt='' className='mb-3'/>
                                         <Button variant="secondary" style={{width:'100%'}} className="btn-nav">Edit Profile</Button>
                                     </div>
                                     
@@ -53,7 +53,7 @@ const ProfileUser = () => {
                                     </div>
                                     <div>
                                         <div>
-                                            <h2>WaysFood  <img src={logoFoodWays}/></h2>
+                                            <h2>WaysFood  <img src={logoFoodWays} alt=''/></h2>
                                             <Button style={{width:'100%'}} className="btn-profile-user">Finished</Button>
                                         </div>
                                     </div>

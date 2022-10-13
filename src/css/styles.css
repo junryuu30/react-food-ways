@@ -11,6 +11,7 @@
 
 .btn-nav {
     background-color: #433434 !important;
+    border: none;
 
 }
 
@@ -22,9 +23,9 @@
 
 
 /* Nav Patners */
-/* .dropdown-patner {
+.dropdown-patner {
     width: 10px;
-} */
+}
 
 .drop-patner-icon {
     width: 15px;
@@ -66,15 +67,22 @@
     border: none;
 }
 
-.form-edit-profile input{
+.form-edit-profile{
     border: 1px solid;
-    background-color: #766C6C;
+    background-color: hsl(0, 100%, 98%);
 }
+
+.form-edit-file {
+    width: 100%;
+}
+
+/* .klip {
+    margin-left: 50px;
+} */
 
 /* Income Transaction */
 .container-income-transaction{
-    background-color: #E5E5E5;
-    height: 80vh;
+    height: 100vh;
 }
 
 .row-1-5{

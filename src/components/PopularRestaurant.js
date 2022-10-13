@@ -1,4 +1,4 @@
-import {Container, Row, Col, Card} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 import CardResto from './CardResto';
 import CardRestoNear from './CardRestoNear';
 import {resto} from './dataDummy/DataPopularResto';

@@ -1,9 +1,9 @@
 import {Container, Row, Col, Button, Form} from 'react-bootstrap';
 import NavPatner from '../NavPatner';
-import klip from '../../assets/klip.svg'
+import klip from '../../assets/klip.png'
 import map from '../../assets/map.png'
 
-const EditProfile = () => {
+const EditGH = () => {
     return (
         <>
             <NavPatner/>
@@ -13,24 +13,17 @@ const EditProfile = () => {
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Row >
-                                <Col className="col-12 col-md-9">
-                                    <input type="text" className="form-edit-profile form-control border-dark mt-3" id="exampleInputEmail1" placeholder='Full Name'/>
+                                <Col className="col-12 col-md-9 mt-3">
+                                    <input type="text" className="form-edit-profile form-control border-dark" id="exampleInputEmail1" placeholder='Full Name'/>
 
                                 </Col>
-                                <Col className="col-12 col-md-3 d-flex" >
-                                    <Form.Group  controlId="formBasicEmail" className='form-edit-file'>
-                                        <Form.Control className="mt-3" type="file" placeholder="Attach Image" hidden />
-                                        <Form.Label className="d-flex form-edit-profile form-control border-dark mt-3">
-                                                Attach Image
-                                                <img src={klip} style={{
-                                                        marginLeft: '',
-                                                        padding: '',}}
-                                                        className='klip' alt=''/>
-                                           
-                                            
-                                        </Form.Label>
-                                        
-                                    </Form.Group>
+                                <Col className="col-12 col-md-3 mt-3 d-flex" >
+                                <input type="text" className="form-edit-profile form-control border-dark" id="exampleInputEmail1" placeholder='Attach Image' disabled/>
+                                    <img src={klip} 
+                                    alt=''
+                                    style={{
+                                        marginLeft: '-30px',
+                                        padding: '5px'}}/>
                                 </Col>
                             </Row>
                         </Form.Group>
@@ -45,13 +38,15 @@ const EditProfile = () => {
 
                         <Row>
                             <Col className="col-12 col-md-9 mb-3">
-                                <input type="text" className="form-edit-profile form-control border-dark mb-3" id="exampleInputEmail1" placeholder='Full Name'/>
+                                <input type="text" className="form-edit-profile form-control border-dark" id="exampleInputEmail1" placeholder='Full Name'/>
                             </Col>
                             <Col className="col-12 col-md-3 mb-3">
                                 <Button variant="secondary" className="btn-nav" style={{width:'100%'}}>Select On Map</Button>
-                                <img src={map} alt='' style={{
+                                <img src={map} 
+                                alt=''
+                                style={{
                                         marginLeft: '-80px',
-                                        padding: '5px' }}/>
+                                        padding: '5px'}}/>
 
                             </Col>
                         </Row>
@@ -69,4 +64,4 @@ const EditProfile = () => {
     )
 }
 
-export default EditProfile
+export default EditGH

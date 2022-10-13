@@ -6,8 +6,7 @@ font logo waysfood blm sesuai
 klik here di login dan di register belum
 ternary di navfoodways nya belum (yang jadi beda nav setelah log jadi patners/user)
 header: responsive aneh
-dropdown ==> navuser, navpatner terlalu kiri
-popullar resto cardnya + menu detail card => tidak responsive saat di hp, dan tab
+
 Cara kerja ada barang di keranjang(?)
 
 
