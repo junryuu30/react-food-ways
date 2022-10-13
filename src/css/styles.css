@@ -74,11 +74,12 @@
 
 .form-edit-file {
     width: 100%;
+
 }
 
-/* .klip {
-    margin-left: 50px;
-} */
+.klip {
+    width: 15px;
+}
 
 /* Income Transaction */
 .container-income-transaction{

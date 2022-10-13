@@ -1,15 +1,15 @@
 import {Container, Row, Col, Button, Form} from 'react-bootstrap';
-import NavUser from '../NavUser';
+import NavPatner from '../NavPatner';
 import klip from '../../assets/klip.svg'
 import map from '../../assets/map.png'
 
 const EditProfile = () => {
     return (
         <>
-            <NavUser/>
+            <NavPatner/>
             <Container fluid>
                 <Container className=''>
-                    <h2 className='m-4'>Edit Profile</h2>
+                    <h2 className='m-4'>Edit Profile Partner</h2>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Row >

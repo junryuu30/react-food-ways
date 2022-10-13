@@ -1,12 +1,11 @@
 import {Container, Row, Col, Button, Form} from 'react-bootstrap';
-import NavUser from '../NavUser';
 import klip from '../../assets/klip.svg'
-import map from '../../assets/map.png'
+import NavPatner from '../NavPatner';
 
-const EditProfile = () => {
+const AddProduct = () => {
     return (
         <>
-            <NavUser/>
+            <NavPatner/>
             <Container fluid>
                 <Container className=''>
                     <h2 className='m-4'>Edit Profile</h2>
@@ -14,7 +13,7 @@ const EditProfile = () => {
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Row >
                                 <Col className="col-12 col-md-9">
-                                    <input type="text" className="form-edit-profile form-control border-dark mt-3" id="exampleInputEmail1" placeholder='Full Name'/>
+                                    <input type="text" className="form-edit-profile form-control border-dark mt-3" id="exampleInputEmail1" placeholder='Title'/>
 
                                 </Col>
                                 <Col className="col-12 col-md-3 d-flex" >
@@ -42,25 +41,9 @@ const EditProfile = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control type="email" placeholder="Enter email" className="form-edit-profile form-control border-dark" />
+                            <Form.Control type="text" placeholder="Price" className="form-edit-profile form-control border-dark" />
                         </Form.Group>
 
-                        <Form.Group className="mb-3">
-                            <Form.Control type="text" placeholder="phone" className="form-edit-profile form-control border-dark"/>
-                        </Form.Group>
-
-                        <Row>
-                            <Col className="col-12 col-md-9 mb-3">
-                                <input type="text" className="form-edit-profile form-control border-dark mb-3" id="exampleInputEmail1" placeholder='Full Name'/>
-                            </Col>
-                            <Col className="col-12 col-md-3 mb-3">
-                                <Button variant="secondary" className="btn-nav" style={{width:'100%'}}>Select On Map</Button>
-                                <img src={map} alt='' style={{
-                                        marginLeft: '-80px',
-                                        padding: '5px' }}/>
-
-                            </Col>
-                        </Row>
                         <div className="d-flex justify-content-end">
                             <Col className="col-12 col-md-2 mb-3">
                                 <Button variant="success" type="submit" style={{width:'100%'}} className='btn-edit-profile text-center'>Save</Button>
@@ -75,4 +58,4 @@ const EditProfile = () => {
     )
 }
 
-export default EditProfile
+export default AddProduct
