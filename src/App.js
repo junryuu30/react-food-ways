@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/styles.css";
 
-import { Component, useContext, useState } from "react";
+import { useState } from "react";
 import { CartContext } from "./Contexts/CartContext";
 
 import Home from './components/pages/Home';
@@ -18,11 +18,11 @@ import AddProduct from "./components/pages/AddProduct";
 
 import IncomeTransaction from "./components/pages/IncomeTransaction";
 import CartOrder from "./components/pages/CartOrder";
+import TryMenu from "./components/pages/TryMenu"
 
 // Try
-import EditTwo from "./components/pages/EditTwo";
-import TryNavbar from "./components/TryNavbar";
-import TryMenu from "./components/pages/TryMenu"
+// import EditTwo from "./components/pages/EditTwo";
+// import TryNavbar from "./components/TryNavbar";
 
 
 
@@ -48,8 +48,8 @@ function App() {
           <Route exact path="/try-menu" element={<TryMenu/>}/>
 
           {/* For Try Everything */}
-          <Route exact path="/edit-two" element={<EditTwo />} />
-          <Route exact path="/try-navbar" element={<TryNavbar />} />
+          {/* <Route exact path="/edit-two" element={<EditTwo />} /> */}
+          {/* <Route exact path="/try-navbar" element={<TryNavbar />} /> */}
 
 
 

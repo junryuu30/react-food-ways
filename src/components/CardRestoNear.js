@@ -6,7 +6,7 @@ const CardRestoNear = (props) => {
 
 
     return (
-        <Card style={{ width: '100%', cursor:'pointer' }} onClick={()=>navigate('/menu-detail')}>
+        <Card style={{ width: '100%', cursor:'pointer' }} onClick={()=>navigate('/try-menu')}>
             <Card.Text >
             <div>
                 <img 

@@ -60,7 +60,8 @@ const ProfileUser = () => {
                                     <div>
                                         <div>
                                             <h2>WaysFood  <img src={logoFoodWays} alt=''/></h2>
-                                            <Button style={{width:'100%'}} className="btn-profile-user">Finished</Button>
+                                            <Button style={{width:'100%'}} className="btn-profile-user"
+                                            >Finished</Button>
                                         </div>
                                     </div>
                                 </Card.Body>

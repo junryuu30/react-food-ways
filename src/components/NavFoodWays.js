@@ -1,11 +1,13 @@
 import {Container, Row, Col, Navbar, Button, Modal} from 'react-bootstrap';
 import logoWaysFood from '../assets/logo-ways-food.svg';
 import React, { useState } from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
 
 function NavFoodWays() {
+  const navigate = useNavigate()
+
   //register
   const [showRegister, setShowRegister] = useState(false);
 
@@ -71,6 +73,24 @@ function NavFoodWays() {
             <p className='text-align-center p-2'>Don't have an account ?
               <span onClick={handleShowRegister} style={{fontWeight:'bold', cursor:'pointer'}}> Klik Here </span>
             </p>
+            <div style={{cursor:'pointer'}}>
+              <div>
+              <label for="exampleInputPassword1" className="form-label"
+              onClick={()=>navigate('/home-login-success')}
+              style={{cursor:'pointer'}}
+              
+              >Login As User</label>
+              </div>
+              <div>
+              <label for="exampleInputPassword1" className="form-label"
+                onClick={()=>navigate('/profile-patners')}
+                style={{cursor:'pointer'}}
+                
+              >Login As Patner</label>
+
+              </div>
+            </div>
+            
           </form>
         </Modal.Body>
       </Modal>

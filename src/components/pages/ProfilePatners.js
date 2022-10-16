@@ -15,7 +15,7 @@ const ProfilePatners = () => {
                 <Container className='container-profile-user'>
                     <Row>
                         <Col>
-                                
+                            <h2 className='m-4'>Profile Patner</h2>
                             <Row>
                                 <Col>
                                     <div style={{width:'180px'}} className=''>
@@ -58,7 +58,9 @@ const ProfilePatners = () => {
                                     <div>
                                         <div>
                                             <h2>WaysFood  <img src={logoFoodWays} alt=''/></h2>
-                                            <Button style={{width:'100%'}} className="btn-profile-user">Finished</Button>
+                                            <Button style={{width:'100%'}} className="btn-profile-user"
+                                                onClick={()=>navigate('/income-transaction')}
+                                            >Finished</Button>
                                         </div>
                                     </div>
                                 </Card.Body>

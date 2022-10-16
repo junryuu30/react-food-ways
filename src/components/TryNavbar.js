@@ -16,6 +16,10 @@ import foodicon from '../assets/foodicon.png';
 
 
 const TryNavbar = () => {
+  
+  const [isLoggedin, setIsLoggedin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+
     return (
         <>
       <Navbar expand="lg" className='navbar-fw' style={{}}>
@@ -28,11 +32,13 @@ const TryNavbar = () => {
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="navbar-scroll" className='justify-content-end'>
-
-            <PrivatePage/>
-            {/* <GuesPage /> */}
-            {/* <AdminPage/> */}
-
+            { isAdmin ?
+            <AdminPage logoutAdmin={() => setIsAdmin(!isAdmin)}/> : 
+            isLoggedin ?
+            <PrivatePage logout={() => setIsLoggedin(!isLoggedin)}/>
+              : <GuestPage  loginAdmin={() => setIsAdmin(!isAdmin)} login={() => setIsLoggedin(!isLoggedin)}/>
+              }  
+           
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -83,7 +89,7 @@ const PrivatePage = () => {
 
 
 // Navbar Before LogIn
-const GuesPage = () => {
+const GuestPage = () => {
     //register
   const [showRegister, setShowRegister] = useState(false);
 
@@ -143,11 +149,20 @@ const GuesPage = () => {
           <form className='form-auth'>
             <h3 className='mt-4' style={{color:'#FFC700'}}>Register</h3>
             <div className="mb-3">
-              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email'/>
+              <input 
+              type="email" 
+              className="form-control" 
+              id="exampleInputEmail1" 
+              aria-describedby="emailHelp" 
+              placeholder='Email'/>
             </div>
 
             <div className="mb-3">
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder='Password'/>
+              <input 
+              type="password" 
+              class="form-control" 
+              id="exampleInputPassword1" 
+              placeholder='Password'/>
             </div>
 
             <div className="mb-3">

@@ -33,7 +33,7 @@ const TryMenu = () => {
                                         <Button variant="warning" style={{ width: '90%' }}
                                             onClick={() => {
                                                 setDataCart([...dataCart, {}]);
-                                                // console.log(dataCart);
+                                                console.log(dataCart);
                                               }}
                                         >
                                             Order</Button>

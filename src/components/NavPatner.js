@@ -42,7 +42,9 @@ function NavPatner() {
                 </Dropdown.Item>
 
                 <hr/>
-                <Dropdown.Item href="#/action-3">
+                <Dropdown.Item href="#/action-3"
+                  onClick={()=> navigate('/')}
+                >
                   <img src={logout} className='drop-patner-icon' alt=''/>
                   Logout
                 </Dropdown.Item>

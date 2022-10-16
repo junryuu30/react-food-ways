@@ -49,8 +49,10 @@ function NavUser() {
                   Profile
                 </Dropdown.Item>
                 <hr/>
-                <Dropdown.Item>
-                  <img src={logout}  alt='' className='drop-patner-icon'/>
+                <Dropdown.Item href="#/action-3"
+                  onClick={()=> navigate('/')}
+                >
+                  <img src={logout} className='drop-patner-icon' alt=''/>
                   Logout
                 </Dropdown.Item>
               </Dropdown.Menu>

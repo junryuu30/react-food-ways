@@ -1,11 +1,12 @@
-import {Container, Row, Col, Button, Form, Modal} from 'react-bootstrap'
-import { DataCart } from '../dataDummy/DataCart'
+import {Container, Row, Col, Button, Form, Modal} from 'react-bootstrap';
+import { DataCart } from '../dataDummy/DataCart';
 import {useState} from 'react';
 
-import NavFoodWays from "../NavFoodWays"
-import map from '../../assets/map.png'
-import trash from '../../assets/trash.png'
+
+import map from '../../assets/map.png';
+import trash from '../../assets/trash.png';
 import mapbox from '../../assets/MapBox1.svg';
+import NavUser from '../NavUser';
 
 const CartOrder = () => {
     const [show, setShow] = useState(false);
@@ -13,7 +14,7 @@ const CartOrder = () => {
 
     return (
         <>
-            <NavFoodWays/>
+            <NavUser/>
             <Container fluid>
                 <Container className='mt-4 '>
                     <h2 className='pt-4'>
