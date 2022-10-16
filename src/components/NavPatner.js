@@ -1,40 +1,44 @@
 import {Navbar, Container, Dropdown} from 'react-bootstrap';
 import logoWaysFood from '../assets/logo-ways-food.svg';
 import profilePatner from '../assets/profilePatner.svg';
-import basket from '../assets/basket.svg';
+
 import userimg from '../assets/userimg.png'
-import logout from '../assets/logout.png'
-import foodicon from '../assets/foodicon.png'
+import logout from '../assets/logout.png';
+import foodicon from '../assets/foodicon.png';
+import {Link, useNavigate} from 'react-router-dom';
 // import React, { useState } from 'react';
  
 
 function NavPatner() {
+  const navigate = useNavigate();
+
   return (
     <>
       <Navbar expand="lg" className='navbar-fw' style={{}}>
         <Container>
-          <Navbar.Brand href="/">
+          <Link to='/' style={{ textDecoration: 'none' }}>
+          <Navbar.Brand>
             WaysFood 
             <img src={logoWaysFood} alt=''/>
           </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="navbar-scroll" className='justify-content-end'>
-            <img src={basket} className='me-2' alt=''/>
             
             <Dropdown>
-              <Dropdown.Toggle variant="warning" id="dropdown-basic" className='dropdown-patner'>
+              <Dropdown.Toggle variant="warning" id="dropdown-basic" className='bg-dropdown'>
                 <img src={profilePatner} alt=''/>
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">
+                <Dropdown.Item onClick={()=> navigate('/profile-patners')}>
                   <img src={userimg} className='drop-patner-icon' alt=''/>
                   Profile Partner
                 </Dropdown.Item>
 
-                <Dropdown.Item href="#/action-2">
+                <Dropdown.Item onClick={()=> navigate('/add-product')}>
                 <img src={foodicon} className='drop-patner-icon' alt=''/>
-                  Another action
+                  Add Product
                 </Dropdown.Item>
 
                 <hr/>

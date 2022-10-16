@@ -1,6 +1,9 @@
 .container-header {
     background-color: #FFC700;
-    /* height: 500px; */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-header img {
@@ -8,6 +11,8 @@
     justify-content: center;
     align-items: center;
 }
+
+
 
 .c-left img {
 

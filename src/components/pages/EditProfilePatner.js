@@ -1,14 +1,20 @@
-import {Container, Row, Col, Button, Form} from 'react-bootstrap';
+import {Container, Row, Col, Button, Form, Modal} from 'react-bootstrap';
+import {useState} from 'react';
+
 import NavPatner from '../NavPatner';
-import klip from '../../assets/klip.svg'
-import map from '../../assets/map.png'
+import klip from '../../assets/klip.svg';
+import map from '../../assets/map.png';
+import mapbox from '../../assets/MapBox1.svg';
+
 
 const EditProfile = () => {
+    const [show, setShow] = useState(false);
+
     return (
         <>
             <NavPatner/>
-            <Container fluid>
-                <Container className=''>
+            <Container fluid className='container-edit-profile'>
+                <Container className='container-edit-profile'>
                     <h2 className='m-4'>Edit Profile Partner</h2>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -61,9 +67,22 @@ const EditProfile = () => {
 
                             </Col>
                         </Row>
+
+                        <Modal
+                            show={show} onHide={()=> setShow(false)}
+                            size='xl'
+                        >
+                            <Modal.Body>
+                                <img src={mapbox} alt='' 
+                                    style={{width:'100%'}}/>
+                            </Modal.Body>
+                        </Modal>
+
                         <div className="d-flex justify-content-end">
-                            <Col className="col-12 col-md-2 mb-3">
-                                <Button variant="success" type="submit" style={{width:'100%'}} className='btn-edit-profile text-center'>Save</Button>
+                            <Col className="col-lg-3 mb-3">
+                                <Button variant="success" type="submit" 
+                                        style={{width:'100%'}} 
+                                        className='btn-bg-brown text-center'>Save</Button>
                             </Col>
                         </div>
                     </Form>

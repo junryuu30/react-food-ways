@@ -15,17 +15,28 @@
 
 }
 
+/* Header */
+.title-header {
+    font-size: 60px;
+}
+
+.p-header {
+    font-size: 20px;
+}
+
 /* PopularRestaurant */
 .container-resto {
    background-color:  #E5E5E5;
 }
 
 
+.bg-dropdown {
+    /* width: 10px; */
+    background-color: #FFC700 !important;
+}
+
 
 /* Nav Patners */
-.dropdown-patner {
-    width: 10px;
-}
 
 .drop-patner-icon {
     width: 15px;
@@ -60,6 +71,8 @@
 
 
 /* edit-profile */
+
+
 .btn-edit-profile {
     margin-top: 30px;
     background-color: #433434 !important;
@@ -67,9 +80,14 @@
     border: none;
 }
 
+.btn-bg-brown {
+    background-color: #433434 !important;
+    border: none;
+}
+
 .form-edit-profile{
     border: 1px solid;
-    background-color: hsl(0, 100%, 98%);
+    background-color: #EFEFEF;
 }
 
 .form-edit-file {

@@ -1,41 +1,59 @@
-import Container from 'react-bootstrap/Container';
-import {Navbar, Button, Modal} from 'react-bootstrap';
+import {Container, Row, Col, Navbar, Button, Modal} from 'react-bootstrap';
 import logoWaysFood from '../assets/logo-ways-food.svg';
 import React, { useState } from 'react';
- 
+import {Link} from "react-router-dom";
+
+
 
 function NavFoodWays() {
   //register
   const [showRegister, setShowRegister] = useState(false);
 
   const handleCloseRegister = () => setShowRegister(false);
-  const handleShowRegister = () => setShowRegister(true);
+  const handleShowRegister = () => {
+    setShowRegister(true);
+    setShowLogin(false);
+  };
 
 
   //login
   const [showLogin, setShowLogin] = useState(false);
 
   const handleCloseLogin = () => setShowLogin(false);
-  const handleShowLogin = () => setShowLogin(true);
-
+  const handleShowLogin = () => {
+    setShowLogin(true);
+    setShowRegister(false);
+  };
+  
 
   return (
     <>
       <Navbar expand="lg" className='navbar-fw' style={{}}>
         <Container>
-          <Navbar.Brand href="#home">
+          <Link to="/" style={{ textDecoration: 'none' }}>
+          <Navbar.Brand className='my-2'>
             WaysFood 
             <img src={logoWaysFood} alt=''/>
           </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="navbar-scroll" className='justify-content-end'>
-              <Button variant="secondary" size="sm" className="btn-nav me-3" onClick={handleShowRegister}>Register</Button>
-              <Button variant="secondary" size="sm" className="btn-nav" onClick={handleShowLogin}>Login</Button>
+            <Row>
+              <Col className='col-lg-6 col-md-6 col-sm-12 my-2'>
+                <Button variant="secondary" className="btn-nav me-3" style={{ width: '100%'}}
+                        onClick={handleShowRegister}>Register</Button>
+              </Col>
+              <Col className='my-2'>
+                <Button variant="secondary" className="btn-nav" style={{ width: '100%'}}
+                        onClick={handleShowLogin}>Login</Button>
+              </Col>
+            </Row>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
       <Modal show={showLogin} onHide={handleCloseLogin}>
+
         <Modal.Body className='form-login'>
           <form className='form-auth'>
             <h3 className='mt-4' style={{color:'#FFC700'}}>Login</h3>
@@ -50,12 +68,15 @@ function NavFoodWays() {
             <div>
             <Button variant="secondary" size="sm" style={{width:'100%'}} className="btn-nav" onClick={handleCloseLogin}>Login</Button>
             </div>
-            <p className='text-align-center p-2'>Don't have an account ? Klik Here</p>
+            <p className='text-align-center p-2'>Don't have an account ?
+              <span onClick={handleShowRegister} style={{fontWeight:'bold', cursor:'pointer'}}> Klik Here </span>
+            </p>
           </form>
         </Modal.Body>
       </Modal>
 
       <Modal show={showRegister} onHide={handleCloseRegister}>
+
         <Modal.Body className='form-login'>
           <form className='form-auth'>
             <h3 className='mt-4' style={{color:'#FFC700'}}>Register</h3>
@@ -88,7 +109,9 @@ function NavFoodWays() {
             <div>
             <Button variant="secondary" size="sm" style={{width:'100%'}} className="btn-nav"  onClick={handleCloseRegister}>Register</Button>
             </div>
-            <p className='text-align-center p-2'>Already have an account ?  Klik Here</p>
+            <p className='text-align-center p-2'>Already have an account ?  
+              <span onClick={handleShowLogin} style={{fontWeight:'bold', cursor:'pointer'}}> Klik Here </span>
+            </p>
           </form>
         </Modal.Body>
       </Modal>

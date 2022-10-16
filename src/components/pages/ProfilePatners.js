@@ -1,10 +1,13 @@
-import {Container, Row, Col, Button, Card} from 'react-bootstrap'
-import NavPatner from '../NavPatner'
-import ProfileGeprek from '../../assets/ProfilePatners2.svg'
+import {Container, Row, Col, Button, Card} from 'react-bootstrap';
+import NavPatner from '../NavPatner';
+import ProfileGeprek from '../../assets/ProfilePatners2.svg';
+import {useNavigate} from 'react-router-dom';
 
 import logoFoodWays from '../../assets/logo-ways-food.svg'
 
 const ProfilePatners = () => {
+    const navigate = useNavigate();
+
     return (
         <>
             <NavPatner/>
@@ -12,12 +15,12 @@ const ProfilePatners = () => {
                 <Container className='container-profile-user'>
                     <Row>
                         <Col>
-                                <h2 className='m-4'></h2>
+                                
                             <Row>
                                 <Col>
                                     <div style={{width:'180px'}} className=''>
-                                        <img src={ProfileGeprek} alt=''/>
-                                        <Button variant="secondary" style={{width:'100%'}} className="btn-nav">Profile Patners</Button>
+                                        <img src={ProfileGeprek} className='mb-3' alt=''/>
+                                        <Button variant="secondary" style={{width:'100%'}} className="btn-nav" onClick={()=>navigate('/edit-profile-patner')}>Edit Profile</Button>
                                     </div>
                                     
                                 </Col>

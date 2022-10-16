@@ -8,7 +8,7 @@ const AddProduct = () => {
             <NavPatner/>
             <Container fluid>
                 <Container className=''>
-                    <h2 className='m-4'>Edit Profile</h2>
+                    <h2 className='m-4'>Add Product</h2>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Row >
@@ -24,15 +24,8 @@ const AddProduct = () => {
                                                 Attach Image
                                             </div>
                                             <div>
-                                                <img src={klip} 
-                                                        style={{
-                                                        marginLeft: '',
-                                                        padding: '',}}
-                                                        className='klip' alt=''/>
-                                            </div>
-                                                
-                                           
-                                            
+                                                <img src={klip} className='klip' alt=''/>
+                                            </div>  
                                         </Form.Label>
                                         
                                     </Form.Group>
@@ -45,8 +38,10 @@ const AddProduct = () => {
                         </Form.Group>
 
                         <div className="d-flex justify-content-end">
-                            <Col className="col-12 col-md-2 mb-3">
-                                <Button variant="success" type="submit" style={{width:'100%'}} className='btn-edit-profile text-center'>Save</Button>
+                            <Col className="col-lg-3 mb-3">
+                                <Button variant="success" type="submit" 
+                                        style={{width:'100%'}} 
+                                        className='btn-bg-brown text-center'>Save</Button>
                             </Col>
                         </div>
                     </Form>

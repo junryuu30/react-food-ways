@@ -1,6 +1,8 @@
 import {Card, Button} from 'react-bootstrap';
 
+
 const MenuCard = (props) => {
+
     return (
         <Card style={{ width: '100%' }} className=''>
             <Card.Text className="">
@@ -15,7 +17,9 @@ const MenuCard = (props) => {
                 </div>
             </Card.Text>
             <div className='d-flex justify-content-center m-2' >
-                <Button variant="warning" style={{ width: '90%' }}>Order</Button>
+                <Button variant="warning" style={{ width: '90%' }}
+                
+                >Order</Button>
             </div>
         </Card>    
     )

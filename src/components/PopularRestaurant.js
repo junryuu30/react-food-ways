@@ -1,10 +1,12 @@
 import {Container, Row, Col} from 'react-bootstrap';
 import CardResto from './CardResto';
 import CardRestoNear from './CardRestoNear';
+
 import {resto} from './dataDummy/DataPopularResto';
 import {restoNear} from './dataDummy/restoNear';
 
 const PopularRestaurant = () => {
+
     return (
         <Container fluid className='container-resto py-4'>
             <Container className='container-resto'>

@@ -20,3 +20,8 @@ bagroundcolornya aneh banget kenapa
 cart order blm semua
 
 
+
+ditambahkan file
+auth==> login.js untuk mencoba login memakai pilihan navbar, dan private root, tpi masih blm bisa di pake
+
+

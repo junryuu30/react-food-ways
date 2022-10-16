@@ -1,9 +1,13 @@
-import {Container, Row, Col, Button, Card} from 'react-bootstrap'
-import NavUser from '../NavUser'
-import zaynMalik from '../../assets/zaynMalik.svg'
-import logoFoodWays from '../../assets/logo-ways-food.svg'
+import {Container, Row, Col, Button, Card} from 'react-bootstrap';
+import NavUser from '../NavUser';
+import zaynMalik from '../../assets/zaynMalik.svg';
+import logoFoodWays from '../../assets/logo-ways-food.svg';
+import { useNavigate } from 'react-router-dom';
 
 const ProfileUser = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <NavUser/>
@@ -16,7 +20,9 @@ const ProfileUser = () => {
                                 <Col>
                                     <div style={{width:'180px'}} className=''>
                                         <img src={zaynMalik} alt='' className='mb-3'/>
-                                        <Button variant="secondary" style={{width:'100%'}} className="btn-nav">Edit Profile</Button>
+                                        <Button variant="secondary" style={{width:'100%'}} className="btn-nav"
+                                        onClick={()=>navigate('/edit-profile')}
+                                        >Edit Profile</Button>
                                     </div>
                                     
                                 </Col>

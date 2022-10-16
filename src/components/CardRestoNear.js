@@ -1,8 +1,12 @@
 import {Card} from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const CardRestoNear = (props) => {
+    const navigate = useNavigate();
+
+
     return (
-        <Card style={{ width: '100%' }}>
+        <Card style={{ width: '100%', cursor:'pointer' }} onClick={()=>navigate('/menu-detail')}>
             <Card.Text >
             <div>
                 <img 

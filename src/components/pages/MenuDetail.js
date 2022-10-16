@@ -1,13 +1,14 @@
 import {Container, Row, Col} from 'react-bootstrap';
 import { DataMenu } from '../dataDummy/DataMenu';
-import NavFoodWays from '../NavFoodWays';
 import MenuCard from './MenuCard';
 import '../../css/MenuCard.css'
+import NavUser from '../NavUser';
 
 const MenuDetail = () => {
+    
     return (
         <>
-            <NavFoodWays/>
+            <NavUser/>
             <Container fluid className='container-menu-detail'>
                 <Container className='container-menu-detail'>
                     <h2 className='p-4'>Geprek Bensu, Menu</h2>

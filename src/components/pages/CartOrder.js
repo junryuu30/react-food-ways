@@ -1,10 +1,16 @@
-import {Container, Row, Col, Button, Form} from 'react-bootstrap'
+import {Container, Row, Col, Button, Form, Modal} from 'react-bootstrap'
+import { DataCart } from '../dataDummy/DataCart'
+import {useState} from 'react';
+
 import NavFoodWays from "../NavFoodWays"
 import map from '../../assets/map.png'
 import trash from '../../assets/trash.png'
-import { DataCart } from '../dataDummy/DataCart'
+import mapbox from '../../assets/MapBox1.svg';
 
 const CartOrder = () => {
+    const [show, setShow] = useState(false);
+
+
     return (
         <>
             <NavFoodWays/>
@@ -19,13 +25,25 @@ const CartOrder = () => {
                                 <input type="text" className="form-control" id="exampleInputEmail1" placeholder='Harbour Building'/>
                             </Col>
                             <Col className="col-12 col-md-3 mb-3">
-                                <Button variant="secondary" className="btn-nav" style={{width:'100%'}}>Select On Map</Button>
+                                <Button variant="secondary" className="btn-nav" style={{width:'100%'}}
+                                        onClick={setShow}
+                                >Select On Map</Button>
                                 <img src={map} alt='' style={{
                                         marginLeft: '-80px',
                                         padding: '5px'}}/>
 
                             </Col>
                         </Row>
+
+                        <Modal
+                            show={show} onHide={()=> setShow(false)}
+                            size='xl'
+                        >
+                            <Modal.Body>
+                                <img src={mapbox} alt='' 
+                                    style={{width:'100%'}}/>
+                            </Modal.Body>
+                        </Modal>
 
                         <h5>Review Your Order</h5>
                         <Row>
@@ -101,10 +119,14 @@ const CartOrder = () => {
                             </Col>
                         </Row>
                     
-                    <Form.Group className="">
-                        <Button type="button" className='btn-nav float-end my-3 lg-px-4' style={{padding:'0 60px'}}>
-                            Order
-                        </Button>
+                    <Form.Group className="my-4">
+                        <div className="d-flex justify-content-end">
+                            <Col className="col-lg-3 mb-3">
+                                <Button variant="success" type="submit" 
+                                        style={{width:'100%'}} 
+                                        className='btn-bg-brown text-center'>Order</Button>
+                            </Col>
+                        </div>
                     </Form.Group>
 
                 </Container>
