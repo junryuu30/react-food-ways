@@ -83,7 +83,7 @@ function NavFoodWays() {
               </div>
               <div>
               <label for="exampleInputPassword1" className="form-label"
-                onClick={()=>navigate('/profile-patners')}
+                onClick={()=>navigate('/income-transaction')}
                 style={{cursor:'pointer'}}
                 
               >Login As Patner</label>

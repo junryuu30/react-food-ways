@@ -1,63 +1,87 @@
-// const Register = ({show, setShow, setShowLogin}) => {
-//     const handleClose = () => setShow(false);
-//     const handleShow = () => setShow(true);
-    
-//     return (
-//         <>
-//            <Modal show={showRegister} onHide={handleCloseRegister}>
-//                 <Modal.Body className='form-login'>
-//                 <form className='form-auth'>
-//                     <h3 className='mt-4' style={{color:'#FFC700'}}>Register</h3>
-//                     <div className="mb-3">
-//                     <input 
-//                     type="email" 
-//                     className="form-control" 
-//                     id="exampleInputEmail1" 
-//                     aria-describedby="emailHelp" 
-//                     placeholder='Email'/>
-//                     </div>
-
-//                     <div className="mb-3">
-//                     <input 
-//                     type="password" 
-//                     class="form-control" 
-//                     id="exampleInputPassword1" 
-//                     placeholder='Password'/>
-//                     </div>
-
-//                     <div className="mb-3">
-//                     <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Full Name'/>
-//                     </div>
-
-//                     <div className="mb-3">
-//                     <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Gender'/>
-//                     </div>
-
-//                     <div className="mb-3">
-//                     <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Phone'/>
-//                     </div>
-
-//                     <select className="form-select mb-3" aria-label="Default select example">
-//                     <option selected>Who Me</option>
-//                     <option value="1">As User</option>
-//                     <option value="2">As Patner</option>
-//                     </select>
-
-//                     <div>
-//                     <Button variant="secondary" size="sm" style={{width:'100%'}} className="btn-nav"  onClick={handleCloseRegister}>Register</Button>
-//                     </div>
-//                     <p className='text-align-center p-2'>Already have an account ?  
-//                         <span onClick={handleShowLogin} style={{fontWeight:'bold', cursor:'pointer'}}> Klik Here </span>
-//                     </p>
-//                 </form>
-//                 </Modal.Body>
-//             </Modal>
+import { Modal, Form, Button } from "react-bootstrap"
 
 
-//         </>
-//     )
+const Register = ({show, setShow, setShowLogin}) => {
 
-// }
+    const handleClose = () => setShow(false);
 
+    return (
+        <>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Body>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control 
+                        label="Email"
+                        type="email"
+                        placeholder="Email"
+                        // value={userLogin.email}
+                        />
+                    </Form.Group>
 
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control 
+                        label="Email"
+                        type="password"
+                        placeholder="Email"
+                        // value={userLogin.email}
+                        />
+                    </Form.Group>
 
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Full Name</Form.Label>
+                        <Form.Control 
+                        label="Email"
+                        type="email"
+                        placeholder="Email"
+                        // value={userLogin.email}
+                        />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3">
+                        <Form.Label>Gender</Form.Label>
+                        <Form.Select>
+                            <option>Female</option>
+                            <option>Male</option>
+                        </Form.Select>
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Phone</Form.Label>
+                        <Form.Control 
+                        label="Email"
+                        type="email"
+                        placeholder="Email"
+                        // value={userLogin.email}
+                        />
+                    </Form.Group>
+                    
+                    <Form.Group className="mb-3">
+                        <Form.Label>Who Me</Form.Label>
+                        <Form.Select>
+                            <option>As User</option>
+                            <option>As Patner</option>
+                        </Form.Select>
+                    </Form.Group>
+
+                    <div>
+                        <Button variant="secondary" size="sm" style={{width:'100%'}} className="btn-nav"  
+                            onClick={() => setShow(false)}
+                        >Register</Button>
+                    </div>
+                    <p className='text-align-center p-2'>Already have an account ?  
+                        <span style={{fontWeight:'bold', cursor:'pointer'}}
+                                onClick={() => { setShow(false)
+                                                setShowLogin(true)}}
+                        > Click Here </span>
+                    </p>
+
+                </Modal.Body>
+            </Modal>
+        
+        </>
+    )
+}
+
+export default Register
